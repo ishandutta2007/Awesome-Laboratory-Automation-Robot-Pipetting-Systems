@@ -197,113 +197,222 @@ Your support enables continuous updates, protocol verification, and new open-sou
   <sub>Maintained with ❤️ for the global scientific robotics and biotech automation community.</sub>
 </div>
 >>>>>>> edc74a597c057b8c952af20641909824c744e664
-# Top Laboratory Automation & Robot Pipetting Systems Ecosystem
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Liquid Handling, Protocol Orchestration & Hardware-Agnostic Control*  
-**Last updated: October 2026**
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Laboratory Automation & Robot Pipetting Systems**. These tools enable researchers to control high-throughput fluid assays via code scripts—writing Python protocols that orchestrate pipettes, thermocyclers, plate readers, and robotic arms with reproducibility and traceability.
-
-**Examples** include Benchling, TetraScience, Automata, Opentrons, Biosero Green Button Go, HighRes Biosolutions, Strateos (Transcriptic), Hamilton VENUS, Tecan FluentControl, and Cellario (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, hardware-agnostic control, and open protocol standards—ideal for lab engineers, researchers, and developers seeking transparent, vendor-independent automation.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[Opentrons](https://opentrons.com/)**  
-  Open-source lab automation with the **Python Protocol API** for Flex and OT-2 robots . Write lab protocols in Python that read like lab notebooks—specify labware, pipettes, modules, and the exact sequence of movements . Features **runtime parameters** (user-customizable variables without code changes), **robot motor control** (gantry, plunger, gripper), **liquid level detection**, **dynamic pipetting**, and **concurrent commands** for thermocyclers and heater-shakers . The **Opentrons App** runs protocols with simulation mode before physical execution .
-
-- **[Benchling](https://www.benchling.com/)**  
-  R&D cloud platform for biology with electronic lab notebook (ELN), LIMS, and protocol management. Features structured data capture, collaboration, and integration with lab automation.
-
-- **[TetraScience](https://www.tetrascience.com/)**  
-  Scientific data cloud connecting lab instruments to cloud data platforms. Features automated data collection, standardization, and integration with analytics tools.
-
-- **[Automata](https://www.automata.tech/)**  
-  Lab automation platform with robotic arms and software orchestration. Features flexible workflow automation for biology and chemistry labs.
-
-- **[Biosero Green Button Go](https://www.biosero.com/)**  
-  Lab automation scheduling software orchestrating multiple instruments. Features drag-and-drop workflow design, device integration, and plate scheduling.
-
-- **[HighRes Biosolutions](https://www.highresbio.com/)**  
-  Automated lab systems with robotic arms and scheduling software. Features modular automation for drug discovery and genomics.
-
-- **[Strateos (Transcriptic)](https://strateos.com/)**  
-  Robotic cloud laboratory for life sciences . Experiments specified in **Autoprotocol** (open JSON standard) and submitted via JSON:API REST API . Features remote experiment execution, dataset retrieval, and Python client library (TxPy) .
-
-- **[Hamilton VENUS](https://www.hamiltoncompany.com/)**  
-  Liquid handling robot control software. Features method programming, deck configuration, and integration with Hamilton STAR/Vantage systems.
-
-- **[Tecan FluentControl](https://www.tecan.com/)**  
-  Liquid handling robot control software for Tecan Freedom EVO and Fluent systems. Features method development, simulation, and device integration.
-
-- **[Cellario](https://www.highresbio.com/cellario/)**  
-  Laboratory automation scheduling software from HighRes Biosolutions. Orchestrates multiple instruments and robotic arms.
-
-## Open-Source GitHub Projects
-
-- **[Opentrons Python Protocol API](https://github.com/Opentrons/opentrons)**  
-  **The most accessible open-source lab automation API** (Apache-2.0). Write Python protocols that control Flex and OT-2 robots, pipettes, thermocyclers, heater-shakers, and temperature modules . **Runtime parameters** allow user customization without code changes . **Robot motor control** commands move gantry, plunger, and gripper independently of labware . **Liquid level detection** targets meniscus during aspiration . **Concurrent commands** run thermocycler profiles while pipetting continues . Simulate with `opentrons_simulate protocol.py` before physical execution .
-
-- **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)**  
-  **The hardware-agnostic SDK for lab automation** (MIT). Control **Hamilton STAR, Tecan EVO, and Opentrons OT-2** through a single universal Python interface that works on Windows, macOS, Linux, and Raspberry Pi . **Swap backends without rewriting protocols**—same code runs on different robots . Features **async-first design**, **browser-based visualizer** for deck state during runs, **simulation backend** for protocol testing without hardware, and **resource management** (plates, tip racks, troughs) with automatic tip and volume tracking . **The most flexible open-source framework for multi-vendor lab automation.**
-
-- **[Autoprotocol](https://github.com/autoprotocol/autoprotocol-python)**  
-  **Open JSON standard for specifying biology experiments** (open-source) . Used by Strateos/Transcriptic cloud lab for remote experiment execution . Features declarative instructions for liquid handling, thermocycling, gel separation, and purification . **The most widely adopted open standard for lab protocol interoperability.**
-
-- **[SiLA 2](https://sila-standard.com/)**  
-  **Open standard for lab instrument communication** (open-source) . Enables **vendor-agnostic device integration**—combine new equipment with legacy instruments . Features **Feature Definition Language (FDL)** for specifying instrument capabilities, **Universal SiLA Client** for discovery without configuration, and **SiLA Installer** for easy server/client deployment . **The emerging backbone for multi-vendor lab automation**—used by Novo Nordisk, Tecan, and device manufacturers .
-
-- **[labmcp-sila2](https://pypi.org/project/labmcp-sila2/)**  
-  **MCP server bridging SiLA 2 instruments to AI agents** (open-source) . Exposes SiLA commands and properties as MCP tools for Claude/Cursor integration. Features **command allowlists**, **FDL validation** (parameter names, types, ranges checked before sending), **read-only mode**, and **safety limits** (max command wait time, subscription duration) . **The most safety-conscious open-source bridge between AI agents and physical lab equipment.**
-
-- **[eLabFTW](https://github.com/elabftw/elabftw)**  
-  **Free open-source electronic lab notebook** (open-source) . Used institutionally at **University of Graz** and **RWTH Aachen University** . Features experiment documentation, protocol uploads, versioning, timestamping, and **integration with lab equipment and inventory databases** . Deployed via Docker with PHP/MySQL . **The most widely adopted open-source ELN in European academia.**
-
-- **[BiomationScripterLib](https://github.com/intbio-ncl/BiomationScripterLib)**  
-  **Python library for scripting bio-automation protocols** (open-source) . Assists with protocol generation for lab automation equipment. **A lightweight starting point for custom automation scripts.**
-
-### Additional Strong Open-Source Options
-
-- **[SharpHamilton](https://github.com/weihuajiang/SharpHamilton)** — C# library for controlling Hamilton STAR/STARlet/STAR plus/Vantage . **The most accessible open-source Hamilton controller outside Python.**
-- **[opentrons-balance](https://github.com/Kedar-Materials-by-Design-Lab/opentrons-balance)** — Integration of mass balance with Opentrons robot .
-- **[formulations-prep](https://github.com/AniketChitre/formulations-prep)** — Automated viscous liquid handling with Opentrons OT-2 and gravimetric analysis .
-- **[automancer](https://github.com/adaptyvbio/automancer)** — Lab automation framework .
-- **[SimpleDeviceModel (sdm)](https://github.com/SimpleDeviceModel/sdm)** — Open-source instrument control and data acquisition framework .
-- **[Lab_Auto_Camera_Detection](https://github.com/LabAutoSig)** — Cost-effective camera detection for integrating standalone devices into automated workflows .
-- Community **n8n** workflows for lab protocol alerting and data pipeline automation.
-
-**Frameworks for building custom systems**: Combine **PyLabRobot** for hardware-agnostic control with **Opentrons Python API** for accessible protocol scripting, **SiLA 2** for multi-vendor device integration, **labmcp-sila2** for AI-agent control with safety guardrails, and **eLabFTW** for documentation—creating a fully self-hosted, enterprise-grade lab automation platform.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Laboratory automation systems controlling physical equipment must comply with laboratory safety regulations and instrument manufacturer warranties.
-- **Open-source lab automation is mature and production-ready.** Opentrons Python API is the most accessible entry point for code-driven protocols . PyLabRobot provides hardware-agnostic control across Hamilton, Tecan, and Opentrons . SiLA 2 is the emerging standard for multi-vendor integration . **These are genuine alternatives to commercial platforms.**
-- **Autoprotocol is the open standard for remote lab execution.** Strateos/Transcriptic uses Autoprotocol as the JSON specification for cloud lab experiments . This enables researchers to submit experiments programmatically without owning physical equipment.
-- **AI-agent control of physical instruments requires safety guardrails.** labmcp-sila2 implements command allowlists, FDL parameter validation, read-only mode, and explicit hazard annotations for commands that "may physically act on the device" . **Never connect AI agents to lab equipment without deterministic safety limits.**
-- **Electronic lab notebooks are foundational for reproducibility.** eLabFTW is deployed at University of Graz and RWTH Aachen, supporting FAIR documentation and integration with equipment and inventory . **Without ELN integration, automation protocols lack traceability.**
-- Self-hosted open-source solutions require proper security hardening, instrument driver validation, and ongoing maintenance. **Physical lab equipment can cause injury or damage if controlled incorrectly**—always simulate before physical execution.
-
----
-
-**Made for lab engineers, automation researchers, and developers building transparent laboratory automation solutions.**  
+## Top Laboratory Automation & Robot Pipetting Systems Ecosystem
+
+
+
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+
+*Focused on Liquid Handling, Protocol Orchestration & Hardware-Agnostic Control*  
+
+**Last updated: October 2026**
+
+
+
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Laboratory Automation & Robot Pipetting Systems**. These tools enable researchers to control high-throughput fluid assays via code scripts—writing Python protocols that orchestrate pipettes, thermocyclers, plate readers, and robotic arms with reproducibility and traceability.
+
+
+
+**Examples** include Benchling, TetraScience, Automata, Opentrons, Biosero Green Button Go, HighRes Biosolutions, Strateos (Transcriptic), Hamilton VENUS, Tecan FluentControl, and Cellario (the category leaders).
+
+
+
+**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, hardware-agnostic control, and open protocol standards—ideal for lab engineers, researchers, and developers seeking transparent, vendor-independent automation.
+
+
+
+Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
+
+
+
+## Table of Contents
+
+- [SaaS/Hosted Platforms](#saas-hosted-platforms)
+
+- [Open-Source GitHub Projects](#open-source-github-projects)
+
+- [How to Contribute](#how-to-contribute)
+
+- [Disclaimer](#disclaimer)
+
+
+
+## SaaS/Hosted Platforms
+
+
+
+- **[Opentrons](https://opentrons.com/)**  
+
+  Open-source lab automation with the **Python Protocol API** for Flex and OT-2 robots . Write lab protocols in Python that read like lab notebooks—specify labware, pipettes, modules, and the exact sequence of movements . Features **runtime parameters** (user-customizable variables without code changes), **robot motor control** (gantry, plunger, gripper), **liquid level detection**, **dynamic pipetting**, and **concurrent commands** for thermocyclers and heater-shakers . The **Opentrons App** runs protocols with simulation mode before physical execution .
+
+
+
+- **[Benchling](https://www.benchling.com/)**  
+
+  R&D cloud platform for biology with electronic lab notebook (ELN), LIMS, and protocol management. Features structured data capture, collaboration, and integration with lab automation.
+
+
+
+- **[TetraScience](https://www.tetrascience.com/)**  
+
+  Scientific data cloud connecting lab instruments to cloud data platforms. Features automated data collection, standardization, and integration with analytics tools.
+
+
+
+- **[Automata](https://www.automata.tech/)**  
+
+  Lab automation platform with robotic arms and software orchestration. Features flexible workflow automation for biology and chemistry labs.
+
+
+
+- **[Biosero Green Button Go](https://www.biosero.com/)**  
+
+  Lab automation scheduling software orchestrating multiple instruments. Features drag-and-drop workflow design, device integration, and plate scheduling.
+
+
+
+- **[HighRes Biosolutions](https://www.highresbio.com/)**  
+
+  Automated lab systems with robotic arms and scheduling software. Features modular automation for drug discovery and genomics.
+
+
+
+- **[Strateos (Transcriptic)](https://strateos.com/)**  
+
+  Robotic cloud laboratory for life sciences . Experiments specified in **Autoprotocol** (open JSON standard) and submitted via JSON:API REST API . Features remote experiment execution, dataset retrieval, and Python client library (TxPy) .
+
+
+
+- **[Hamilton VENUS](https://www.hamiltoncompany.com/)**  
+
+  Liquid handling robot control software. Features method programming, deck configuration, and integration with Hamilton STAR/Vantage systems.
+
+
+
+- **[Tecan FluentControl](https://www.tecan.com/)**  
+
+  Liquid handling robot control software for Tecan Freedom EVO and Fluent systems. Features method development, simulation, and device integration.
+
+
+
+- **[Cellario](https://www.highresbio.com/cellario/)**  
+
+  Laboratory automation scheduling software from HighRes Biosolutions. Orchestrates multiple instruments and robotic arms.
+
+
+
+## Open-Source GitHub Projects
+
+
+
+- **[Opentrons Python Protocol API](https://github.com/Opentrons/opentrons)**  
+
+  **The most accessible open-source lab automation API** (Apache-2.0). Write Python protocols that control Flex and OT-2 robots, pipettes, thermocyclers, heater-shakers, and temperature modules . **Runtime parameters** allow user customization without code changes . **Robot motor control** commands move gantry, plunger, and gripper independently of labware . **Liquid level detection** targets meniscus during aspiration . **Concurrent commands** run thermocycler profiles while pipetting continues . Simulate with `opentrons_simulate protocol.py` before physical execution .
+
+
+
+- **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)**  
+
+  **The hardware-agnostic SDK for lab automation** (MIT). Control **Hamilton STAR, Tecan EVO, and Opentrons OT-2** through a single universal Python interface that works on Windows, macOS, Linux, and Raspberry Pi . **Swap backends without rewriting protocols**—same code runs on different robots . Features **async-first design**, **browser-based visualizer** for deck state during runs, **simulation backend** for protocol testing without hardware, and **resource management** (plates, tip racks, troughs) with automatic tip and volume tracking . **The most flexible open-source framework for multi-vendor lab automation.**
+
+
+
+- **[Autoprotocol](https://github.com/autoprotocol/autoprotocol-python)**  
+
+  **Open JSON standard for specifying biology experiments** (open-source) . Used by Strateos/Transcriptic cloud lab for remote experiment execution . Features declarative instructions for liquid handling, thermocycling, gel separation, and purification . **The most widely adopted open standard for lab protocol interoperability.**
+
+
+
+- **[SiLA 2](https://sila-standard.com/)**  
+
+  **Open standard for lab instrument communication** (open-source) . Enables **vendor-agnostic device integration**—combine new equipment with legacy instruments . Features **Feature Definition Language (FDL)** for specifying instrument capabilities, **Universal SiLA Client** for discovery without configuration, and **SiLA Installer** for easy server/client deployment . **The emerging backbone for multi-vendor lab automation**—used by Novo Nordisk, Tecan, and device manufacturers .
+
+
+
+- **[labmcp-sila2](https://pypi.org/project/labmcp-sila2/)**  
+
+  **MCP server bridging SiLA 2 instruments to AI agents** (open-source) . Exposes SiLA commands and properties as MCP tools for Claude/Cursor integration. Features **command allowlists**, **FDL validation** (parameter names, types, ranges checked before sending), **read-only mode**, and **safety limits** (max command wait time, subscription duration) . **The most safety-conscious open-source bridge between AI agents and physical lab equipment.**
+
+
+
+- **[eLabFTW](https://github.com/elabftw/elabftw)**  
+
+  **Free open-source electronic lab notebook** (open-source) . Used institutionally at **University of Graz** and **RWTH Aachen University** . Features experiment documentation, protocol uploads, versioning, timestamping, and **integration with lab equipment and inventory databases** . Deployed via Docker with PHP/MySQL . **The most widely adopted open-source ELN in European academia.**
+
+
+
+- **[BiomationScripterLib](https://github.com/intbio-ncl/BiomationScripterLib)**  
+
+  **Python library for scripting bio-automation protocols** (open-source) . Assists with protocol generation for lab automation equipment. **A lightweight starting point for custom automation scripts.**
+
+
+
+### Additional Strong Open-Source Options
+
+
+
+- **[SharpHamilton](https://github.com/weihuajiang/SharpHamilton)** — C# library for controlling Hamilton STAR/STARlet/STAR plus/Vantage . **The most accessible open-source Hamilton controller outside Python.**
+
+- **[opentrons-balance](https://github.com/Kedar-Materials-by-Design-Lab/opentrons-balance)** — Integration of mass balance with Opentrons robot .
+
+- **[formulations-prep](https://github.com/AniketChitre/formulations-prep)** — Automated viscous liquid handling with Opentrons OT-2 and gravimetric analysis .
+
+- **[automancer](https://github.com/adaptyvbio/automancer)** — Lab automation framework .
+
+- **[SimpleDeviceModel (sdm)](https://github.com/SimpleDeviceModel/sdm)** — Open-source instrument control and data acquisition framework .
+
+- **[Lab_Auto_Camera_Detection](https://github.com/LabAutoSig)** — Cost-effective camera detection for integrating standalone devices into automated workflows .
+
+- Community **n8n** workflows for lab protocol alerting and data pipeline automation.
+
+
+
+**Frameworks for building custom systems**: Combine **PyLabRobot** for hardware-agnostic control with **Opentrons Python API** for accessible protocol scripting, **SiLA 2** for multi-vendor device integration, **labmcp-sila2** for AI-agent control with safety guardrails, and **eLabFTW** for documentation—creating a fully self-hosted, enterprise-grade lab automation platform.
+
+
+
+## How to Contribute
+
+
+
+1. Fork the repo.
+
+2. Add/edit entries in `README.md` (follow existing format).
+
+3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
+
+4. Submit PR with a short explanation.
+
+
+
+Star the repo if you find it useful!
+
+
+
+## Disclaimer
+
+
+
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+
+- Laboratory automation systems controlling physical equipment must comply with laboratory safety regulations and instrument manufacturer warranties.
+
+- **Open-source lab automation is mature and production-ready.** Opentrons Python API is the most accessible entry point for code-driven protocols . PyLabRobot provides hardware-agnostic control across Hamilton, Tecan, and Opentrons . SiLA 2 is the emerging standard for multi-vendor integration . **These are genuine alternatives to commercial platforms.**
+
+- **Autoprotocol is the open standard for remote lab execution.** Strateos/Transcriptic uses Autoprotocol as the JSON specification for cloud lab experiments . This enables researchers to submit experiments programmatically without owning physical equipment.
+
+- **AI-agent control of physical instruments requires safety guardrails.** labmcp-sila2 implements command allowlists, FDL parameter validation, read-only mode, and explicit hazard annotations for commands that "may physically act on the device" . **Never connect AI agents to lab equipment without deterministic safety limits.**
+
+- **Electronic lab notebooks are foundational for reproducibility.** eLabFTW is deployed at University of Graz and RWTH Aachen, supporting FAIR documentation and integration with equipment and inventory . **Without ELN integration, automation protocols lack traceability.**
+
+- Self-hosted open-source solutions require proper security hardening, instrument driver validation, and ongoing maintenance. **Physical lab equipment can cause injury or damage if controlled incorrectly**—always simulate before physical execution.
+
+
+
+---
+
+
+
+**Made for lab engineers, automation researchers, and developers building transparent laboratory automation solutions.**  
+
 Let's make Laboratory Automation & Robot Pipetting Systems more open, data-driven, and reproducible.
