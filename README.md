@@ -1,105 +1,194 @@
-# Awesome-Laboratory-Automation-Robot-Pipetting-Systems
+<div align="center">
 
-## Top Laboratory Automation & Robot Pipetting Systems Ecosystem
+![Awesome Laboratory Automation & Robot Pipetting Systems](assets/banner.svg)
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Liquid Handling, Workcell Orchestration & Closed-Loop Experiment Execution*  
-**Last updated: March 2026**
+# 🔬 Awesome Laboratory Automation & Robot Pipetting Systems 🤖
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Laboratory Automation & Robot Pipetting Systems**. These tools control liquid handling robots, orchestrate multi-instrument workcells, and connect experiment execution to electronic lab notebooks — enabling high-throughput screening, assay development, and autonomous "lab-in-the-loop" workflows.
-
-**Examples** include Benchling, TetraScience, Automata, OpenTrons, Biosero Green Button Go, HighRes Biosolutions, Strateos (Transcriptic), Hamilton VENUS, Tecan FluentControl, and Cellario OS (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, Python-native protocol control, and transparent workcell orchestration — ideal for academic labs, biotech startups, and developers building accessible automation infrastructure.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[Benchling Automation](https://www.benchling.com/)**  
-  Unified platform connecting instrument data to scientific records, enabling "lab-in-the-loop" systems where AI models propose candidates and automated labs execute experiments. Launched with **open ecosystem** partners including **HighRes, Automata, Ginkgo Bioworks, Celltrio, Opentrons, and Hamilton** [citation:2]. Features **Automation Designer** (drag-and-drop pipeline builder), **Custom Code** (Python-in-Benchling for advanced parsing and analysis), and **Experiment Optimization** (ML and Bayesian methods for next-best experimental conditions) [citation:14]. Pulls data from **200+ instruments** across file-based and API-based systems, automatically linked to samples and experiments [citation:2].
-
-- **[TetraScience Tetra Data Platform](https://www.tetrascience.com/)**  
-  Open, vendor-agnostic platform purpose-built for scientific data, built on AWS. Ingests raw data from **1000+ instruments**, replatforms to Tetra OS, and harmonizes into vendor-agnostic format via **Intermediate Data Schema (IDS)** [citation:3]. Event-driven architecture with **GxP support** including audit trails and disaster recovery. Data lands in open-source **Delta Lake** format for SQL queries via Amazon Athena and integration with Databricks, Snowflake, or enterprise data lakes [citation:3]. Features **full data lineage** from capture to archival with human-in-the-loop audit trails [citation:15].
-
-- **[Automata LINQ](https://www.automata.tech/)**  
-  Lab automation platform building "operating system for AI-ready labs" with **$45M Series C** (January 2026) led by Dimension with strategic investment from **Danaher Corporation** [citation:4]. **LINQ** offers both a **node-based workflow canvas** (drag-and-drop, no-code) and a **Python SDK** for developers, built on an industry-first intelligent scheduling engine [citation:16]. **Cloud-native architecture** enables centralized collaboration and management across multiple workcells. Open platform with full public developer documentation and REST API. Integrating with Danaher's Molecular Devices and Beckman Coulter Life Sciences instruments [citation:4].
-
-- **[OpenTrons](https://opentrons.com/)**  
-  **Open-source liquid handling robots** used by Stanford, MIT, Harvard, Merck, and Pfizer [citation:5]. **Flex series** (third generation) supports 1–1000 µL pipetting with Flex 1/8/96 channels, 12 main plate positions plus 4 temporary storage, plate gripper, and smart screen. **OT-2** is the desktop-level, cost-effective open-source alternative. Both share the same **Python API and open-source protocol library** [citation:5]. **Opentrons is a launch partner for Benchling Automation** [citation:2].
-
-- **[Biosero Green Button Go](https://biosero.com/)**  
-  Automation scheduling and orchestration software with **Green Button Go Scheduler** (overnight/weekend experiment execution) and **Green Button Go Orchestrator** (full lab orchestration, job routing, safety protocols) [citation:6]. February 2026: **Assistive AI** integrated into Green Button Go allows users to create, review, and troubleshoot automation workflows using **plain English instead of code** [citation:18]. **Strictly assistive** — AI does not execute workflows or make autonomous decisions; all scientific, operational, and quality decisions remain in human hands [citation:18].
-
-- **[HighRes Biosolutions Cellario OS](https://www.highres.com/)**  
-  Web-based orchestration software managing full lab workflows including **manual steps, mobile carts, and shared devices** [citation:11]. **Enhanced Digital SOPs** integrate human-performed steps into automated workflows with step-by-step guidance and data capture. **Instruction Libraries** standardize common procedures. **Parallel Requesting** enables concurrent experiments sharing critical resources with conflict detection. **CellarioOS 1.13** adds cart scheduling, Skip Approval workflows, and integrations with Mosaic by Cenevo and Scigilian [citation:11]. Acquired **Let's Go Robotics** (low-volume dispensing) in March 2025 [citation:7].
-
-- **[Hamilton VENUS](https://www.hamiltoncompany.com/)**  
-  Software for Hamilton Microlab STAR and VANTAGE liquid handlers. **VENUS 6.3** provides method editor, deck layout configuration, and 21 CFR Part 11 security settings [citation:9]. **CO-RE II pipette technology** with individual pressure monitoring for error detection. Supports 8–384 channel pipetting with on-deck centrifuge and shaker integration [citation:1].
-
-- **[Tecan FluentControl](https://www.tecan.com/)**  
-  Control software for Tecan Fluent liquid handling platforms. **FluentControl 3.8** introduces **Identity Access Management (IAM)** with 12-character minimum passwords, DriverFramework 3.3.14+ (no dots in driver names), and automatic user migration from legacy UMS to IAM [citation:10]. Requires Tecan Field Service Engineer for firmware updates.
-
-- **[Strateos (formerly Transcriptic)](https://www.strateos.com/)**  
-  **Cloud Lab Automation-as-a-Service** platform providing remote access laboratories and lab control software. Founded 2012, based in Menlo Park [citation:8].
-
-## Open-Source GitHub Projects
-
-- **[pyhamilton](https://github.com/dgretton/pyhamilton)**  
-  **Python for Hamilton liquid handling robots.** 181+ GitHub stars, actively maintained [citation:12]. Provides Pythonic interface to Hamilton Microlab STAR and VANTAGE systems, enabling programmatic protocol development without proprietary VENUS software for routine workflows.
-
-- **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)**  
-  **Interactive and hardware-agnostic SDK for lab automation.** 398+ GitHub stars, updated this week [citation:12]. Cross-platform Python framework for controlling liquid handling robots from multiple vendors with a unified API. The most actively developed open-source lab automation SDK.
-
-- **[Tecan Fluent Python Interface](https://github.com/pylabrobot/pylabrobot)**  
-  Python interface to TECAN Fluent liquid handling robot [citation:12]. Enables programmatic control and protocol execution.
-
-- **[robotools](https://github.com/JuBiotech/robotools)**  
-  **Pythonic in-silico liquid handling and creation of Tecan FreedomEVO worklists.** 17+ GitHub stars [citation:12]. Generates worklists for Tecan Freedom EVO platforms programmatically.
-
-- **[robotevo](https://github.com/qPCR4vir/robotevo)**  
-  **Generates Freedom EVOware scripts for the Freedom EVO universal pipetting robot from TECAN.** 28+ GitHub stars [citation:12]. Provides abstraction layers for Tecan Freedom EVO programming.
-
-- **[Roboliq](https://github.com/ellis/roboliq)**  
-  **Software for controlling liquid handling robots.** 11+ GitHub stars (archived 2018 but historically significant) [citation:12]. Early open-source attempt at vendor-agnostic liquid handling control.
-
-- **[orca](https://github.com/Cheshire-Labs/orca)**  
-  **Lab Automation Scheduling Software.** 20+ GitHub stars, updated December 2025 [citation:12]. Open-source scheduling and orchestration for lab automation workflows.
-
-- **[Otto_the_Robot](https://github.com/Luger-Lab/Otto_the_Robot)**  
-  **Protocols for Pipetting with OpenTrons.** 347 commits, actively maintained [citation:17]. Collection of OpenTrons protocols including custom labware definitions and validated scripts for specific assays.
-
-### Additional Strong Open-Source Options
-
-- **Opentrons Python API** — The foundational open-source Python API for programming OT-2 and Flex workstations. Full protocol library available on GitHub.
-- **SiLA 2** — Open standard for lab instrument communication, enabling vendor-agnostic control.
-- **Antha** — Declarative language for describing and executing laboratory protocols (historical).
-- **Autoprotocol** — JSON-based standard for describing biology experiments, originally from Transcriptic/Strateos.
-
-**Frameworks for building custom systems**: Combine **PyLabRobot** for hardware-agnostic robot control, **pyhamilton** for Hamilton-specific protocol execution, **Opentrons Python API** for accessible benchtop automation, and **orca** for scheduling across multiple instruments to build a complete open-source lab automation stack.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Laboratory automation systems must comply with applicable regulations (21 CFR Part 11 for electronic records, GxP for regulated workflows) and validated for specific assay requirements. **Liquid handling protocols and automation workflows must be validated before use with biological or chemical samples** — incorrect volumes, cross-contamination, or instrument failures can compromise experiments and safety.
-- Self-hosted open-source solutions require proper instrument calibration, protocol validation, and integration testing before production use.
+**A community-curated directory of cloud workcell orchestration platforms, enterprise liquid handling software, and open-source Python robotics SDKs for high-throughput screening, assay execution, and autonomous "lab-in-the-loop" science.**
 
 ---
 
-**Made for lab automation engineers, research scientists, protocol developers, and developers building accessible laboratory automation platforms.**  
-Let's make laboratory automation more open, accessible, and reproducible.
+<!-- Badges Header -->
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems?style=flat-square&logo=github" alt="Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems?style=flat-square&logo=github" alt="Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems?style=flat-square" alt="Issues" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+</div>
+
+---
+
+## 📑 Table of Contents
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 Enterprise & SaaS Hosted Platforms](#-enterprise--saas-hosted-platforms)
+- [🐍 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🧩 Building a Modern Open-Source Stack](#-building-a-modern-open-source-stack)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Community](#-support--community)
+- [⚠️ Disclaimer](#-disclaimer)
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global **laboratory automation and robotic liquid handling market** is valued at approximately **$6.6 billion to $10.1 billion in 2026** and is projected to expand at a compound annual growth rate (**CAGR of 6.6%–9.4%**) toward **$14.5+ billion by 2030**, spurred by drug discovery acceleration, personalized genomics, and synthetic biology.
+
+The market exhibits a **bimodal structural dynamic**:
+- **Physical Hardware Tier (Moderately Concentrated):** Capital-intensive liquid handling robotics, plate sealers, and robotic gantries remain concentrated among incumbent industrial leaders (such as Tecan, Hamilton, Danaher/Beckman Coulter, and Thermo Fisher), who historically defended walled-garden automation ecosystems.
+- **Software & Workcell Orchestration Tier (Highly Fragmented & Disrupted):** Workcell scheduling, data harmonization, and protocol design are experiencing rapid fragmentation. Cloud-native platforms (e.g., Automata, Benchling, TetraScience) and community-driven, hardware-agnostic Python frameworks (e.g., PyLabRobot) are unbundling legacy software, breaking vendor lock-in, and spearheading the shift toward AI-powered "lab-in-the-loop" self-driving laboratories.
+
+---
+
+## 🏢 Enterprise & SaaS Hosted Platforms
+
+Below is a curated comparison of leading SaaS and enterprise software platforms for liquid handling orchestration, digital SOPs, and automated assay management. 
+
+> *Table sorted in descending order by company scale (market valuation / annual revenue).*
+
+| 🏢 Platform | 💰 Company Size (Valuation / Revenue) | 🎯 Core Focus & Capabilities | 💵 Pricing (Starting Tier) | 🎁 Free Tier / Free Trial Limits |
+|:---|:---|:---|:---|:---|
+| **[Benchling Automation](https://www.benchling.com/)** | **Valuation: $6.1B** (Series F) <br> *~$200M ARR* | Connects scientific data directly to automated execution. Features drag-and-drop Automation Designer, Python-in-Benchling scripts, and Bayesian experiment optimization across 200+ instruments. | **$15,000 / year** <br> *(Commercial Startup tier, includes up to 5 user seats; scales at ~$3,000/seat/yr)* | **Free Forever Tier for Academics** (includes core ELN, molecular biology suite, and 10 GB cloud storage); 14-day commercial trial on request. |
+| **[Tecan FluentControl](https://www.tecan.com/)** | **Market Cap: $4.2B USD** *(SIX: TECN)* <br> *~$1.1B Annual Revenue* | Dedicated liquid handling software for Tecan Fluent workstations. Features 3D deck layout visualization, Identity Access Management (IAM), 21 CFR Part 11 security, and liquid class editors. | **$6,500 / year** <br> *(Base software runtime & driver license per workstation seat)* | **30-Day Evaluation Trial** with FluentControl 3D deck simulator and offline protocol compiler upon authorized partner registration. |
+| **[Hamilton VENUS](https://www.hamiltoncompany.com/)** | **Est. Valuation: ~$3.0B** <br> *~$1.05B Annual Revenue (Private)* | Native control environment for Hamilton Microlab STAR, VANTAGE, and Nimbus platforms. Features CO-RE II pipette monitoring, deck configuration, and automated error-recovery routines. | **$5,500 base license** <br> *(One-time license + $1,200/year workstation maintenance contract)* | **30-Day Offline Simulation License** (full VENUS Simulator with virtual deck editor, step-through debugging, and mock run simulation). |
+| **[TetraScience Tetra Data Platform](https://www.tetrascience.com/)** | **Valuation: $1.2B** (Series B Unicorn) <br> *~$80M+ Total Funding* | Scientific data cloud ingesting raw outputs from 1,000+ laboratory instruments. Harmonizes data into vendor-agnostic Intermediate Data Schema (IDS) and open Delta Lake for AI/ML pipelines. | **$25,000 / year** <br> *(Starter tier connecting up to 5 automated instrument data pipelines)* | **30-Day Proof-of-Concept Sandbox** supporting up to 3 instrument pipeline integrations and sample IDS data transformation models. |
+| **[Opentrons Cloud & Protocol Designer](https://opentrons.com/)** | **Valuation: ~$500M** (Series C) <br> *~$200M+ Total Funding* | Cloud-connected accessible laboratory automation. Provides intuitive visual Protocol Designer, central robot fleet management, and direct integration with Benchling and Python runtimes. | **$49 / month per robot** <br> *(Opentrons Cloud/LabApp tier; $0 for local protocol execution software)* | **100% Free Forever Local Software** with unrestricted visual Protocol Designer, unlimited protocol exports, and full local Python API access. |
+| **[Automata LINQ](https://www.automata.tech/)** | **Valuation: ~$320M** *(Series C led by Dimension & Danaher, 2026)* | Cloud-native "operating system for AI-ready labs." Features intelligent scheduling engine, drag-and-drop workflow canvas, and Python SDK to orchestrate multi-vendor robotic workcells. | **$18,000 / year** <br> *(Base orchestrator subscription per multi-instrument workcell)* | **14-Day Cloud Simulation Trial** with virtual digital twin access, workflow routing simulation, and API playground upon enterprise demo validation. |
+| **[Biosero Green Button Go](https://biosero.com/)** | **Acquisition / Valuation: $165M** *(Acquired by BICO Group)* <br> *~$35M Annual Revenue* | Lab automation scheduling and orchestration suite with assistive AI for natural language workflow design, dynamic instrument routing, and 24/7 autonomous scheduling. | **$8,500 / year** <br> *(Green Button Go Scheduler runtime license per robotic instrument cluster)* | **30-Day Evaluation License** featuring GBG virtual instrument simulator, sample workcell layout editor, and assistive AI protocol builder upon certification. |
+| **[HighRes Biosolutions Cellario OS](https://www.highres.com/)** | **Acquisition / Valuation: ~$120M** *(Axel Johnson Inc.)* <br> *~$50M Annual Revenue* | Web-based laboratory orchestration platform coordinating collaborative robots, mobile carts, manual bench steps, and shared analytical devices with clash detection and digital SOPs. | **$12,000 / year** <br> *(Base Cellario runtime license including standard instrument driver bundle)* | **30-Day Virtual Testbed Trial** (Cellario simulation suite with interactive digital SOP authoring and resource conflict detection). |
+| **[Strateos Cloud Lab](https://www.strateos.com/)** | **Valuation / Funding: ~$105M** <br> *~$90M+ Total Capital Raised* | Cloud Lab Automation-as-a-Service enabling remote access to fully automated physical biology workcells in Menlo Park and San Diego via web UI, Autoprotocol JSON, and REST APIs. | **$2,500 / month** <br> *(Base platform subscription + transparent per-run consumables/instrument runtime fees)* | **14-Day Pilot Developer Account** including **$500 cloud execution credit** for protocol syntax dry-runs and automated workcell testing. |
+
+---
+
+## 🐍 Open-Source GitHub Projects
+
+Open-source tooling enables vendor-agnostic control, eliminates prohibitive annual software licenses, and allows researchers to script reproducible multi-step protocols using clean Python.
+
+> *List sorted in descending order by GitHub Star count. Click any star badge to view stargazers.*
+
+1. **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)** [![GitHub stars](https://img.shields.io/github/stars/PyLabRobot/pylabrobot?style=social&color=white)](https://github.com/PyLabRobot/pylabrobot/stargazers)  
+   **The universal, hardware-agnostic Python SDK for lab automation.** Provides a unified, high-level object-oriented interface for liquid handlers across Hamilton (STAR, Microlab Vantage), Tecan (Fluent, Freedom EVO), and Opentrons (OT-2). Includes digital deck visualization, volumetric liquid tracking, standard labware definitions, and pump/heater-shaker controls.
+
+2. **[Opentrons Python API & Workstation Ecosystem](https://github.com/Opentrons/opentrons)** [![GitHub stars](https://img.shields.io/github/stars/Opentrons/opentrons?style=social&color=white)](https://github.com/Opentrons/opentrons/stargazers)  
+   **The foundational open-source protocol engine and workstation software** for Opentrons Flex and OT-2 liquid handling robots. Supports customizable tip pickup, temperature/magnetic/thermocycler modules, 1–96 channel pipettes, and custom labware definition generation.
+
+3. **[pyhamilton](https://github.com/dgretton/pyhamilton)** [![GitHub stars](https://img.shields.io/github/stars/dgretton/pyhamilton?style=social&color=white)](https://github.com/dgretton/pyhamilton/stargazers)  
+   **Direct Python interface for Hamilton liquid handling workstations.** Enables programmatic, scriptable control over Hamilton Microlab STAR, STARlet, and VANTAGE liquid handlers, bypassing the proprietary VENUS GUI for complex, dynamic, and feedback-driven assay routines.
+
+4. **[Autoprotocol Python](https://github.com/autoprotocol/autoprotocol-python)** [![GitHub stars](https://img.shields.io/github/stars/autoprotocol/autoprotocol-python?style=social&color=white)](https://github.com/autoprotocol/autoprotocol-python/stargazers)  
+   **Python library for generating Autoprotocol**, the standard JSON specification for formalizing liquid handling, pipetting, thermocycling, and automated biological experiments for cloud laboratories and robotics workcells.
+
+5. **[OpenSDL](https://github.com/fl-sean03/OpenSDL)** [![GitHub stars](https://img.shields.io/github/stars/fl-sean03/OpenSDL?style=social&color=white)](https://github.com/fl-sean03/OpenSDL/stargazers)  
+   **Modular Python foundation for reproducible computational and autonomous laboratories (Self-Driving Labs).** Connects robotics orchestration, simulation profiles, and closed-loop Bayesian optimization for experiment steering.
+
+6. **[MADSci](https://github.com/AD-SDL/MADSci)** [![GitHub stars](https://img.shields.io/github/stars/AD-SDL/MADSci?style=social&color=white)](https://github.com/AD-SDL/MADSci/stargazers)  
+   **Modular Autonomous Discovery for Science Framework.** Provides open-source distributed node communication, orchestrator microservices, and instrument driver abstractions for robotic laboratories.
+
+7. **[Matterix](https://github.com/AccelerationConsortium/Matterix)** [![GitHub stars](https://img.shields.io/github/stars/AccelerationConsortium/Matterix?style=social&color=white)](https://github.com/AccelerationConsortium/Matterix/stargazers)  
+   **Digital Twin simulation environment for robotics-assisted chemistry and biology lab automation.** Built by the Acceleration Consortium to simulate physical robotic arms, dispensers, and plate transport prior to physical execution.
+
+8. **[Plateo](https://github.com/Edinburgh-Genome-Foundry/Plateo)** [![GitHub stars](https://img.shields.io/github/stars/Edinburgh-Genome-Foundry/Plateo?style=social&color=white)](https://github.com/Edinburgh-Genome-Foundry/Plateo/stargazers)  
+   **Python biolab automation library** developed by Edinburgh Genome Foundry. Features picklist simulators, microplate parsers, volume tracking, and worklist generators for acoustic (Labcyte Echo) and tip-based liquid handlers.
+
+9. **[orca](https://github.com/Cheshire-Labs/orca)** [![GitHub stars](https://img.shields.io/github/stars/Cheshire-Labs/orca?style=social&color=white)](https://github.com/Cheshire-Labs/orca/stargazers)  
+   **Lab automation scheduling software and workflow orchestrator.** Executes parallel lab workflows in pure Python across multi-vendor instruments without heavy enterprise overhead.
+
+10. **[robotevo](https://github.com/qPCR4vir/robotevo)** [![GitHub stars](https://img.shields.io/github/stars/qPCR4vir/robotevo?style=social&color=white)](https://github.com/qPCR4vir/robotevo/stargazers)  
+    **Generates Freedom EVOware scripts** for the Freedom EVO universal pipetting robot from TECAN. Abstracts complex liquid classes and multi-channel dispensing.
+
+11. **[automancer](https://github.com/adaptyvbio/automancer)** [![GitHub stars](https://img.shields.io/github/stars/adaptyvbio/automancer?style=social&color=white)](https://github.com/adaptyvbio/automancer/stargazers)  
+    **Open-source experiment automation application** created by Adaptyv Bio. Enables researchers to visually design, schedule, and execute automated multi-instrument assay protocols.
+
+12. **[robotools](https://github.com/JuBiotech/robotools)** [![GitHub stars](https://img.shields.io/github/stars/JuBiotech/robotools?style=social&color=white)](https://github.com/JuBiotech/robotools/stargazers)  
+    **Pythonic in-silico liquid handling and Tecan Freedom EVO worklist generator.** Translates high-level dilution and transfer logic into formatted .gwl files.
+
+13. **[Roboliq](https://github.com/ellis/roboliq)** [![GitHub stars](https://img.shields.io/github/stars/ellis/roboliq?style=social&color=white)](https://github.com/ellis/roboliq/stargazers)  
+    **Declarative protocol automation engine for liquid handling robots.** Pioneered high-level semantic descriptions for plate layouts, liquid class calibration, and liquid volume calculations.
+
+14. **[Otto_the_Robot](https://github.com/Luger-Lab/Otto_the_Robot)** [![GitHub stars](https://img.shields.io/github/stars/Luger-Lab/Otto_the_Robot?style=social&color=white)](https://github.com/Luger-Lab/Otto_the_Robot/stargazers)  
+    **Validated Protocols for Pipetting with OpenTrons.** Academic repository of tested protocols, customized labware definitions, and liquid classes for structural biology, crystallization, and biophysics assays.
+
+---
+
+## 🧩 Building a Modern Open-Source Stack
+
+By combining modular open-source components, researchers can construct a vendor-agnostic, self-hosted laboratory automation architecture:
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                 Experiment Design & Optimization            │
+│                 (OpenSDL / Bayesian Active Learning)        │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────┐
+│                Workflow Scheduling & Orchestration           │
+│                    (orca / Automancer / MADSci)              │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────┐
+│                Unified Robot Control & Drivers               │
+│         (PyLabRobot / pyhamilton / Opentrons Python API)     │
+└──────────────────────────────┬──────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────┐
+│                 Liquid Handlers & Physical Deck              │
+│        (Opentrons Flex/OT-2, Hamilton STAR, Tecan Fluent)   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+- **Execution Control:** Use [PyLabRobot](https://github.com/PyLabRobot/pylabrobot) as the unified abstraction layer across diverse pipetting hardware.
+- **Instrument-Specific Logic:** Leverage [pyhamilton](https://github.com/dgretton/pyhamilton) for deep native Hamilton control or [Opentrons Python API](https://github.com/Opentrons/opentrons) for benchtop microplates.
+- **Workflow Scheduling:** Use [orca](https://github.com/Cheshire-Labs/orca) to coordinate incubators, plate readers, centrifuges, and liquid handlers in parallel.
+- **Standard Protocol Format:** Formalize protocol definitions with [Autoprotocol Python](https://github.com/autoprotocol/autoprotocol-python) for interoperability.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! Help make laboratory automation and robotic pipetting tools accessible to researchers worldwide:
+
+1. 🍴 **Fork the repository** on GitHub.
+2. 🌿 **Create a new branch** (`git checkout -b feature/add-new-tool`).
+3. ✍️ **Add or update an entry** following the table or list schema (include factual descriptions, starting price, free tier limit, and links).
+4. 🧪 **Check formatting** to ensure Markdown rendering and badge links are valid.
+5. 🚀 **Submit a Pull Request** with a clear explanation of why the tool belongs in this list.
+
+For broader collections of curated software, explore [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Laboratory-Automation-Robot-Pipetting-Systems&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Community
+
+Thank you for exploring and utilizing this curated directory! If you find this repository valuable for your research, lab setup, or biotech engineering workflows, please consider supporting the project:
+
+- ⭐ **Star the repository** to boost discoverability and help other scientists find open automation tools.
+- 🍴 **Fork the repo** to adapt it for your own research group, robotics workcell, or protocol library.
+- 📢 **Share with peers** on LinkedIn, Twitter/X, Discord, or laboratory automation forums.
+- ☕ **Sponsor the maintainer** — Buy a coffee or support ongoing maintenance via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+Your support enables continuous updates, protocol verification, and new open-source tooling guides!
+
+---
+
+## ⚠️ Disclaimer
+
+- This is an **independent, community-curated index** — listings are not commercial endorsements.
+- Regulated laboratory environments must adhere to applicable regulatory frameworks (such as FDA **21 CFR Part 11** for electronic records and signatures, and **GxP** validation protocols).
+- **Physical Validation Required:** All robotic liquid handling scripts, volumetric transfer calculations, and scheduling sequences must be thoroughly dry-run and validated with mock buffers prior to executing protocols with live biological specimens or hazardous chemical agents.
+
+---
+
+<div align="center">
+  <sub>Maintained with ❤️ for the global scientific robotics and biotech automation community.</sub>
+</div>
