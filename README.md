@@ -1,6 +1,6 @@
 # Awesome-Laboratory-Automation-Robot-Pipetting-Systems
 
-# Top Laboratory Automation & Robot Pipetting Systems Ecosystem
+## Top Laboratory Automation & Robot Pipetting Systems Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Liquid Handling, Workcell Orchestration & Closed-Loop Experiment Execution*  
