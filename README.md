@@ -69,48 +69,48 @@ Below is a curated comparison of leading SaaS and enterprise software platforms 
 
 Open-source tooling enables vendor-agnostic control, eliminates prohibitive annual software licenses, and allows researchers to script reproducible multi-step protocols using clean Python.
 
-> *List sorted in descending order by GitHub Star count. Click any star badge to view stargazers.*
+> *List sorted in descending order by GitHub Stars_Count. Click any Stars_Badge to view stargazers.*
 
-1. **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)** [![GitHub stars](https://img.shields.io/github/stars/PyLabRobot/pylabrobot?style=social&color=white)](https://github.com/PyLabRobot/pylabrobot/stargazers)  
+1. **[PyLabRobot](https://github.com/PyLabRobot/pylabrobot)** [![GitHub_Stars](https://img.shields.io/github/stars/PyLabRobot/pylabrobot?style=social&color=white)](https://github.com/PyLabRobot/pylabrobot/stargazers)  
    **The universal, hardware-agnostic Python SDK for lab automation.** Provides a unified, high-level object-oriented interface for liquid handlers across Hamilton (STAR, Microlab Vantage), Tecan (Fluent, Freedom EVO), and Opentrons (OT-2). Includes digital deck visualization, volumetric liquid tracking, standard labware definitions, and pump/heater-shaker controls.
 
-2. **[Opentrons Python API & Workstation Ecosystem](https://github.com/Opentrons/opentrons)** [![GitHub stars](https://img.shields.io/github/stars/Opentrons/opentrons?style=social&color=white)](https://github.com/Opentrons/opentrons/stargazers)  
+2. **[Opentrons Python API & Workstation Ecosystem](https://github.com/Opentrons/opentrons)** [![GitHub_Stars](https://img.shields.io/github/stars/Opentrons/opentrons?style=social&color=white)](https://github.com/Opentrons/opentrons/stargazers)  
    **The foundational open-source protocol engine and workstation software** for Opentrons Flex and OT-2 liquid handling robots. Supports customizable tip pickup, temperature/magnetic/thermocycler modules, 1–96 channel pipettes, and custom labware definition generation.
 
-3. **[pyhamilton](https://github.com/dgretton/pyhamilton)** [![GitHub stars](https://img.shields.io/github/stars/dgretton/pyhamilton?style=social&color=white)](https://github.com/dgretton/pyhamilton/stargazers)  
+3. **[pyhamilton](https://github.com/dgretton/pyhamilton)** [![GitHub_Stars](https://img.shields.io/github/stars/dgretton/pyhamilton?style=social&color=white)](https://github.com/dgretton/pyhamilton/stargazers)  
    **Direct Python interface for Hamilton liquid handling workstations.** Enables programmatic, scriptable control over Hamilton Microlab STAR, STARlet, and VANTAGE liquid handlers, bypassing the proprietary VENUS GUI for complex, dynamic, and feedback-driven assay routines.
 
-4. **[Autoprotocol Python](https://github.com/autoprotocol/autoprotocol-python)** [![GitHub stars](https://img.shields.io/github/stars/autoprotocol/autoprotocol-python?style=social&color=white)](https://github.com/autoprotocol/autoprotocol-python/stargazers)  
+4. **[Autoprotocol Python](https://github.com/autoprotocol/autoprotocol-python)** [![GitHub_Stars](https://img.shields.io/github/stars/autoprotocol/autoprotocol-python?style=social&color=white)](https://github.com/autoprotocol/autoprotocol-python/stargazers)  
    **Python library for generating Autoprotocol**, the standard JSON specification for formalizing liquid handling, pipetting, thermocycling, and automated biological experiments for cloud laboratories and robotics workcells.
 
-5. **[OpenSDL](https://github.com/fl-sean03/OpenSDL)** [![GitHub stars](https://img.shields.io/github/stars/fl-sean03/OpenSDL?style=social&color=white)](https://github.com/fl-sean03/OpenSDL/stargazers)  
+5. **[OpenSDL](https://github.com/fl-sean03/OpenSDL)** [![GitHub_Stars](https://img.shields.io/github/stars/fl-sean03/OpenSDL?style=social&color=white)](https://github.com/fl-sean03/OpenSDL/stargazers)  
    **Modular Python foundation for reproducible computational and autonomous laboratories (Self-Driving Labs).** Connects robotics orchestration, simulation profiles, and closed-loop Bayesian optimization for experiment steering.
 
-6. **[MADSci](https://github.com/AD-SDL/MADSci)** [![GitHub stars](https://img.shields.io/github/stars/AD-SDL/MADSci?style=social&color=white)](https://github.com/AD-SDL/MADSci/stargazers)  
+6. **[MADSci](https://github.com/AD-SDL/MADSci)** [![GitHub_Stars](https://img.shields.io/github/stars/AD-SDL/MADSci?style=social&color=white)](https://github.com/AD-SDL/MADSci/stargazers)  
    **Modular Autonomous Discovery for Science Framework.** Provides open-source distributed node communication, orchestrator microservices, and instrument driver abstractions for robotic laboratories.
 
-7. **[Matterix](https://github.com/AccelerationConsortium/Matterix)** [![GitHub stars](https://img.shields.io/github/stars/AccelerationConsortium/Matterix?style=social&color=white)](https://github.com/AccelerationConsortium/Matterix/stargazers)  
+7. **[Matterix](https://github.com/AccelerationConsortium/Matterix)** [![GitHub_Stars](https://img.shields.io/github/stars/AccelerationConsortium/Matterix?style=social&color=white)](https://github.com/AccelerationConsortium/Matterix/stargazers)  
    **Digital Twin simulation environment for robotics-assisted chemistry and biology lab automation.** Built by the Acceleration Consortium to simulate physical robotic arms, dispensers, and plate transport prior to physical execution.
 
-8. **[Plateo](https://github.com/Edinburgh-Genome-Foundry/Plateo)** [![GitHub stars](https://img.shields.io/github/stars/Edinburgh-Genome-Foundry/Plateo?style=social&color=white)](https://github.com/Edinburgh-Genome-Foundry/Plateo/stargazers)  
+8. **[Plateo](https://github.com/Edinburgh-Genome-Foundry/Plateo)** [![GitHub_Stars](https://img.shields.io/github/stars/Edinburgh-Genome-Foundry/Plateo?style=social&color=white)](https://github.com/Edinburgh-Genome-Foundry/Plateo/stargazers)  
    **Python biolab automation library** developed by Edinburgh Genome Foundry. Features picklist simulators, microplate parsers, volume tracking, and worklist generators for acoustic (Labcyte Echo) and tip-based liquid handlers.
 
-9. **[orca](https://github.com/Cheshire-Labs/orca)** [![GitHub stars](https://img.shields.io/github/stars/Cheshire-Labs/orca?style=social&color=white)](https://github.com/Cheshire-Labs/orca/stargazers)  
+9. **[orca](https://github.com/Cheshire-Labs/orca)** [![GitHub_Stars](https://img.shields.io/github/stars/Cheshire-Labs/orca?style=social&color=white)](https://github.com/Cheshire-Labs/orca/stargazers)  
    **Lab automation scheduling software and workflow orchestrator.** Executes parallel lab workflows in pure Python across multi-vendor instruments without heavy enterprise overhead.
 
-10. **[robotevo](https://github.com/qPCR4vir/robotevo)** [![GitHub stars](https://img.shields.io/github/stars/qPCR4vir/robotevo?style=social&color=white)](https://github.com/qPCR4vir/robotevo/stargazers)  
+10. **[robotevo](https://github.com/qPCR4vir/robotevo)** [![GitHub_Stars](https://img.shields.io/github/stars/qPCR4vir/robotevo?style=social&color=white)](https://github.com/qPCR4vir/robotevo/stargazers)  
     **Generates Freedom EVOware scripts** for the Freedom EVO universal pipetting robot from TECAN. Abstracts complex liquid classes and multi-channel dispensing.
 
-11. **[automancer](https://github.com/adaptyvbio/automancer)** [![GitHub stars](https://img.shields.io/github/stars/adaptyvbio/automancer?style=social&color=white)](https://github.com/adaptyvbio/automancer/stargazers)  
+11. **[automancer](https://github.com/adaptyvbio/automancer)** [![GitHub_Stars](https://img.shields.io/github/stars/adaptyvbio/automancer?style=social&color=white)](https://github.com/adaptyvbio/automancer/stargazers)  
     **Open-source experiment automation application** created by Adaptyv Bio. Enables researchers to visually design, schedule, and execute automated multi-instrument assay protocols.
 
-12. **[robotools](https://github.com/JuBiotech/robotools)** [![GitHub stars](https://img.shields.io/github/stars/JuBiotech/robotools?style=social&color=white)](https://github.com/JuBiotech/robotools/stargazers)  
+12. **[robotools](https://github.com/JuBiotech/robotools)** [![GitHub_Stars](https://img.shields.io/github/stars/JuBiotech/robotools?style=social&color=white)](https://github.com/JuBiotech/robotools/stargazers)  
     **Pythonic in-silico liquid handling and Tecan Freedom EVO worklist generator.** Translates high-level dilution and transfer logic into formatted .gwl files.
 
-13. **[Roboliq](https://github.com/ellis/roboliq)** [![GitHub stars](https://img.shields.io/github/stars/ellis/roboliq?style=social&color=white)](https://github.com/ellis/roboliq/stargazers)  
+13. **[Roboliq](https://github.com/ellis/roboliq)** [![GitHub_Stars](https://img.shields.io/github/stars/ellis/roboliq?style=social&color=white)](https://github.com/ellis/roboliq/stargazers)  
     **Declarative protocol automation engine for liquid handling robots.** Pioneered high-level semantic descriptions for plate layouts, liquid class calibration, and liquid volume calculations.
 
-14. **[Otto_the_Robot](https://github.com/Luger-Lab/Otto_the_Robot)** [![GitHub stars](https://img.shields.io/github/stars/Luger-Lab/Otto_the_Robot?style=social&color=white)](https://github.com/Luger-Lab/Otto_the_Robot/stargazers)  
+14. **[Otto_the_Robot](https://github.com/Luger-Lab/Otto_the_Robot)** [![GitHub_Stars](https://img.shields.io/github/stars/Luger-Lab/Otto_the_Robot?style=social&color=white)](https://github.com/Luger-Lab/Otto_the_Robot/stargazers)  
     **Validated Protocols for Pipetting with OpenTrons.** Academic repository of tested protocols, customized labware definitions, and liquid classes for structural biology, crystallization, and biophysics assays.
 
 ---
