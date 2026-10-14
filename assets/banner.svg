@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#090d1a" />
+    </linearGradient>
+
+    <!-- Glowing Cyan Gradient -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Accent Emerald Gradient -->
+    <linearGradient id="emerald-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Violet Gradient -->
+    <linearGradient id="violet-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Radial Ambient Glows -->
+    <radialGradient id="ambient-cyan" cx="85%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#00f2fe" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ambient-violet" cx="15%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15" />
+      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 800; font-size: 36px; fill: #ffffff; letter-spacing: -0.5px; }
+    .subtitle-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size: 17px; fill: #94a3b8; }
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 12px; fill: #38bdf8; letter-spacing: 0.8px; }
+    .pill-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 500; font-size: 13px; fill: #e2e8f0; }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1280" height="360" rx="16" fill="url(#bg-grad)" />
+  <rect width="1280" height="360" rx="16" fill="url(#ambient-cyan)" />
+  <rect width="1280" height="360" rx="16" fill="url(#ambient-violet)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="60" x2="1280" y2="60" />
+    <line x1="0" y1="120" x2="1280" y2="120" />
+    <line x1="0" y1="180" x2="1280" y2="180" />
+    <line x1="0" y1="240" x2="1280" y2="240" />
+    <line x1="0" y1="300" x2="1280" y2="300" />
+    <line x1="160" y1="0" x2="160" y2="360" />
+    <line x1="320" y1="0" x2="320" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="640" y1="0" x2="640" y2="360" />
+    <line x1="800" y1="0" x2="800" y2="360" />
+    <line x1="960" y1="0" x2="960" y2="360" />
+    <line x1="1120" y1="0" x2="1120" y2="360" />
+  </g>
+
+  <!-- Animated Circuit & Pipette Lines (Background Right Side) -->
+  <g opacity="0.6">
+    <!-- Horizontal Data Streams -->
+    <path d="M 820 80 L 1180 80" stroke="#1e293b" stroke-width="2" stroke-dasharray="6 6" />
+    <path d="M 850 140 L 1220 140" stroke="#1e293b" stroke-width="2" stroke-dasharray="6 6" />
+    <path d="M 800 200 L 1200 200" stroke="#1e293b" stroke-width="2" stroke-dasharray="6 6" />
+    <path d="M 860 260 L 1190 260" stroke="#1e293b" stroke-width="2" stroke-dasharray="6 6" />
+
+    <!-- Animated Pulse Packets -->
+    <circle r="4" fill="#00f2fe" filter="url(#glow)">
+      <animateMotion path="M 820 80 L 1180 80" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle r="3.5" fill="#10b981" filter="url(#glow)">
+      <animateMotion path="M 850 140 L 1220 140" dur="3.2s" begin="1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" begin="1s" repeatCount="indefinite" />
+    </circle>
+    <circle r="4" fill="#8b5cf6" filter="url(#glow)">
+      <animateMotion path="M 800 200 L 1200 200" dur="4.8s" begin="0.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;1;1;0" dur="4.8s" begin="0.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Stylized Robotic Multi-Channel Pipetting Head & Microplate Well Graphic -->
+  <g transform="translate(980, 75)" opacity="0.85">
+    <!-- Pipette Robotic Gantry Arm -->
+    <rect x="0" y="0" width="180" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <rect x="15" y="24" width="150" height="12" fill="#0f172a" />
+    
+    <!-- 8 Multi-Channel Pipette Tips -->
+    <!-- Channel 1 -->
+    <path d="M 24 36 L 27 75 L 30 75 L 33 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 2 -->
+    <path d="M 42 36 L 45 75 L 48 75 L 51 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 3 -->
+    <path d="M 60 36 L 63 75 L 66 75 L 69 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 4 -->
+    <path d="M 78 81 L 81 75 L 84 75 L 87 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 5 -->
+    <path d="M 96 36 L 99 75 L 102 75 L 105 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 6 -->
+    <path d="M 114 36 L 117 75 L 120 75 L 123 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 7 -->
+    <path d="M 132 36 L 135 75 L 138 75 L 141 36 Z" fill="#38bdf8" opacity="0.85" />
+    <!-- Channel 8 -->
+    <path d="M 150 36 L 153 75 L 156 75 L 159 36 Z" fill="#38bdf8" opacity="0.85" />
+
+    <!-- Animated Liquid Droplets Dispensing -->
+    <ellipse cx="28.5" cy="85" rx="2" ry="3.5" fill="#00f2fe" filter="url(#glow)">
+      <animate attributeName="cy" values="78;128" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="64.5" cy="85" rx="2" ry="3.5" fill="#10b981" filter="url(#glow)">
+      <animate attributeName="cy" values="78;128" dur="2.1s" begin="0.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.1s" begin="0.4s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="118.5" cy="85" rx="2" ry="3.5" fill="#00f2fe" filter="url(#glow)">
+      <animate attributeName="cy" values="78;128" dur="1.7s" begin="0.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="1.7s" begin="0.8s" repeatCount="indefinite" />
+    </ellipse>
+    <ellipse cx="154.5" cy="85" rx="2" ry="3.5" fill="#a855f7" filter="url(#glow)">
+      <animate attributeName="cy" values="78;128" dur="2.3s" begin="0.2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0" dur="2.3s" begin="0.2s" repeatCount="indefinite" />
+    </ellipse>
+
+    <!-- 96-Well Microplate Base Representation -->
+    <rect x="10" y="130" width="160" height="36" rx="5" fill="#0f172a" stroke="#334155" stroke-width="1.2" />
+    <circle cx="28.5" cy="148" r="6" fill="#1e293b" stroke="#00f2fe" stroke-width="1.2" />
+    <circle cx="46.5" cy="148" r="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="64.5" cy="148" r="6" fill="#1e293b" stroke="#10b981" stroke-width="1.2" />
+    <circle cx="82.5" cy="148" r="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="100.5" cy="148" r="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="118.5" cy="148" r="6" fill="#1e293b" stroke="#00f2fe" stroke-width="1.2" />
+    <circle cx="136.5" cy="148" r="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="154.5" cy="148" r="6" fill="#1e293b" stroke="#a855f7" stroke-width="1.2" />
+  </g>
+
+  <!-- Foreground Content: Header Tag, Title, Subtitle, Feature Badges -->
+  <g transform="translate(64, 48)">
+    <!-- Pill: Category & Live Indicator -->
+    <g>
+      <rect x="0" y="0" width="310" height="30" rx="15" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+      <!-- Pulsing Dot -->
+      <circle cx="16" cy="15" r="4.5" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="16" cy="15" r="8" fill="#10b981" opacity="0.25">
+        <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="32" y="19" class="badge-text">2026 LAB AUTOMATION DIRECTORY</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="82" class="title-text">
+      Awesome Laboratory Automation &amp;
+    </text>
+    <text x="0" y="126" class="title-text">
+      Robot Pipetting Systems
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="168" class="subtitle-text">
+      Curated Guide to Cloud Workcell Orchestration, Liquid Handling Robotics &amp; Open-Source Python SDKs
+    </text>
+
+    <!-- Feature Pills / Badges along bottom -->
+    <g transform="translate(0, 205)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="220" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+      <text x="16" y="21" class="pill-text">🧪 Multi-Channel Liquid Handlers</text>
+
+      <!-- Pill 2 -->
+      <rect x="232" y="0" width="205" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+      <text x="16" y="21" transform="translate(232, 0)" class="pill-text">🌐 Cloud Workcell Schedulers</text>
+
+      <!-- Pill 3 -->
+      <rect x="449" y="0" width="190" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+      <text x="16" y="21" transform="translate(449, 0)" class="pill-text">🐍 Open-Source Python SDKs</text>
+
+      <!-- Pill 4 -->
+      <rect x="651" y="0" width="180" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1" opacity="0.9" />
+      <text x="16" y="21" transform="translate(651, 0)" class="pill-text">⚡ Lab-in-the-Loop AI</text>
+    </g>
+  </g>
+
+  <!-- Border Highlight -->
+  <rect width="1280" height="360" rx="16" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.6" />
+</svg>
