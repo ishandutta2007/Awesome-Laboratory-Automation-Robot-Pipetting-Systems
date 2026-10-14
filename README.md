@@ -70,7 +70,7 @@ Below is a curated comparison of leading SaaS and enterprise software platforms 
 
 Open-source tooling enables vendor-agnostic control, eliminates prohibitive annual software licenses, and allows researchers to script reproducible multi-step protocols using clean Python.
 
-> *List sorted in descending order by GitHub Stars Count. Click any Stars Badge to view stargazers.*
+> *List sorted in descending order by GitHub_Stars_Count. Click any Stars_Badge to view stargazers.*
 
 1. **[eLabFTW](https://github.com/elabftw/elabftw)** [![GitHub_Stars](https://img.shields.io/github/stars/elabftw/elabftw?style=social&color=white)](https://github.com/elabftw/elabftw/stargazers)  
    **The open-source electronic lab notebook (ELN) and inventory system for research labs.** Provides complete FAIR experiment documentation, equipment tracking, REST API, and workflow integration for automation protocols. Used institutionally across European academia and biotech institutes.
